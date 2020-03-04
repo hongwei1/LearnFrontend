@@ -1,0 +1,42 @@
+p {
+    color: greenyellow;
+    font-size: 2.5em;
+}
+
+body {
+    color: #5b7cde;
+    background-color: #7f2d8d;
+}
+
+h1 {
+    color: red;
+    display: contents;
+    font-size: 3em;
+}
+
+ul {
+    color: #FFEB3B;
+    font-size: 1.2em;
+}
+
+.special{
+    font-style: italic;
+}
+
+/*. is used for the class, for some nodes together. */
+h2.special{
+    text-transform: uppercase;
+}
+
+/*# is used for the specific ID, just used for one node*/
+#purchases{
+    border: 5px solid white;
+    background-color: #278d2c;
+    color: #FFEB3B;
+    padding: 1em;
+}
+
+/*可以利用 id 属性为里面的元素定义样式*/
+#purchases li{
+    font-weight: bold;
+}
