@@ -97,13 +97,47 @@ function addedSth() {
 var items = ["red","blue","yellow","black"]
 function changeColour() {
     js84.style.backgroundColor = items[Math.floor(Math.random()*items.length)];
-    js84.style.width ="200px"
-    js84.style.height ="200px"
+    js84.style.width = "200px"
+    js84.style.height = "200px" // .
+    js84.style.position = "relative" // .
+    // js84.style["height"] ="200px"// [] both are ok here.
 }
 
+var left = 100
+var time;//所有这些都是定义在 window 对象里面的属性.
+//you can control the box now. just move to the left. 
+function moveBox() {
+    time = setInterval( function () {
+        console.log("This is a good timer !!!"+time +":"+ Date())
+        js84.style.left = left++ +"px"
+    }, 20); //2000ms
+}
+
+function stopMoveBox() {
+    window.clearInterval(time)
+}
+
+//If the css is in the seperate file:
+//we use the getComputedStyple method
+//获取的样式是元素在浏览器中最终渲染效果的样式。
+//这个只能获取,不能设置..
+window.getComputedStyle(js84).left;
 
 
+//创建标签 -- 这里的所有东西仅仅是没有放到页面上. 都可以正常使用.
+var js128 = document.createElement("p");
+js128.innerText = "This is a P from js !!!";
+js128.style.backgroundColor = "green";
+js128.id="goodTest"
 
+var i = document.createElement("input");
+i.textContent = "text"
+i.id = "good"
+
+
+// 2rd: 把生成的页面放到 Box 里面
+var js138 = document.getElementById("idDiv")
+js138.appendChild(js128)
 
 
 

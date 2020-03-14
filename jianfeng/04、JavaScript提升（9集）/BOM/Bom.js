@@ -103,26 +103,25 @@ time = setInterval( function () {
 
 }, 2000); //2000ms
 
-//
-// function createTimer() {
-//     time =window.setInterval( function () {
-//         console.log("This is a good timer !!!"+time +":"+ Date())
-//
-//     }, 2000); //2000ms
-// }
-//
-//
-// function clearTimer() {
-//     console.log("this is the timer"+time)
-//     window.clearInterval(time)
-// }
+
+function createTimer() {
+    time =window.setInterval( function () {
+        console.log("This is a good timer !!!"+time +":"+ Date())
+
+    }, 2000); //2000ms
+}
 
 
-// //设置了时间,只在1s 之后执行一次.
-// var time2 = setTimeout(function () {
-//     console.log("This is a ok")
-// },1000)
-// //
+function clearTimer() {
+    console.log("this is the timer"+time)
+    window.clearInterval(time)
+}
+
+
+//设置了时间,只在1s 之后执行一次.
+var time2 = setTimeout(function () {
+    console.log("This is a ok")
+},1000)
 //
 
 
