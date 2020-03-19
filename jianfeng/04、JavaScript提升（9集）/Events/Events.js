@@ -28,7 +28,7 @@ function listener2 () {
     console.log("box4-2-dblclick")
 };
 div4.addEventListener("click",listener1)
-div4.addEventListener("dblclick",listener2)
+div4.addEventListener("dblcl ick",listener2)
 
 div4.removeEventListener("click",listener2)
 // Line-23 和 Line-20的两个函数都将会执行.

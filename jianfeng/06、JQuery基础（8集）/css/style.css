@@ -1,0 +1,28 @@
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: #FFEB3B;
+}
+#box2{
+    width: 100px;
+    height: 100px;
+    background-color: #004ed0;
+}
+#box3{
+    width: 100px;
+    height: 100px;
+    background-color: #3ed050;
+}
+#box4{
+    width: 50px;
+    height: 50px;
+    background-color: #d0321b;
+}
+
+.app{
+    background-color: #c7c924;
+}
+
+.header{
+    background-color: #c92b1e;
+}
