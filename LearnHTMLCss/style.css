@@ -1,0 +1,87 @@
+/*
+标签的分类
+
+1 块级元素block
+
+<P  独占一行, 在网页一块的形式显示.
+从上到下的排列. 快转元素可以自己定义高度和宽度, 默认与父级元素一样宽.
+
+块状元素一般都作为其他元素的容器,可以容纳其他内联元素和其他块状元素..--> 就是一个`盒子`
+
+<p> 为段落标签,  其中不可以包含块级元素.
+
+
+
+2 内联元素inline: a, span, i, em, strong,b ....
+行内逐个显示. 没有自己的形状,没有宽高, 也有盒子模型的.
+
+
+
+
+3 内联块级元素(inline-block) 
+img, textarea, input, select, iframe...
+
+
+4 元素的类型转化: block, inline, inline-block...
+
+
+
+
+*/
+*{
+    margin: 10px;
+    padding: 10px;
+    border: solid black 1px;
+}
+
+li{
+  display: inline-block;
+    width: 100px;
+    height: 25px;
+    background-color: #004ed0;
+    font-size: large;
+    text-align: center;
+    line-height: 25px;
+}
+
+a{
+    /*color: #c7c924;*/
+    text-decoration: none;
+}
+
+
+/*4个 伪类选择器:*/
+/*超链接的初始状态*/
+a:link{
+    color: red;
+}
+
+/*访问后的状态*/
+a:visited{
+    color: yellow;
+}
+
+/*鼠标放上去的状态*/
+a:hover{
+    color: blue;
+}
+
+/*点击时的颜色*/
+a:active{
+    color: #241e23;
+}
+p{
+    color: #c92b1e;
+    /*width: 100px;*/
+    /*height: 100px;*/
+    background-color: #91d028;
+}
+
+img{
+    width: 150px;
+    height: 100px;
+}
+
+/*并集 是 逗号隔开*/
+/*后代 是 空格隔开*/
+/*伪类 是 空格隔开*/

@@ -68,14 +68,113 @@ $(document).ready(function () {
     // $("box2 p:last-child")
     
     //内容过滤器
-    $("p:contains('hongwei')")// 选出字段有`hongwei` 的 p 标签.
+    // $("p:contains('hongwei')")// 选出字段有`hongwei` 的 p 标签.
+
+    //text 
+    //text is no format, only text
+    // $("#box3 p").text("<h1> goood </h1>")
     
+    // html is the HTML format. 
+    // $("#box3 p").html("<h1> This is a good example!! </h1>")
     
+    //对元素值的操作 val (input.value. checked.value, select.value, radio.value..
+    $("#line20").val("I set the new value")
+    var line82 = $("#line20").val()
+    console.log(line82)
+    
+    // $("#line21 #line22 #line23").val(12312)
+    $(".line21").val([3])
+    $("select").val(["l3","l1"])
+    
+    // 创建节点
+    // var $jsp = $("<p></p>")
+    // $("#box3 p").append($jsp)
+    //
+    // // 文本节点
+    // var $jsp = $("<p>This is a p </p>")
+    // $("#box3 p").append($jsp)
+    
+    // 属性节点
+    // var $jsp = $("<p title ='go '>This is a p </p>")
+    // $("#box3 p").append($jsp)
+    
+    //插入的方法
+
+    // $("#box3 p").append() // 为内部追加内容
+    // $("#box3 p").appendTo()//
+    // $("#box3 p").prepend()//
+    // $("#box3 p").prependTo()//
+    //
+    // $("#box3 p").after()
+    // $("#box3 p").before()
+    //
+    //
+    // $("#box1").bind("click", function () {
+    //     $(this).clone(true).insertAfter($(this))
+    // })
+    //
+    console.log("happy day2!!!")
+})
+
+//Dom 加载完毕会调用这个方法.
+$(document).ready(function () {
+    
+//     $("#box2 p").bind("click", function () {
+//         console.log($(this).text())
+//     })
+//
+//     $("#box2 p").unbind("click");
+//     $("#box1").click(function () {
+//         $("#box2 p").append("<p>I am new !!</p>")         
+//     })
+// //    bind 的问题: 
+// //    1 ￿隐式迭代,会把所有匹配的标签都添加事件. 如果有太多标签,会执行太多次...
+// //    2 对尚未存在的标签无法绑定事件.
+//    
+//     $("div").delegate("p","click", function () {
+//         $("#box2 p").append("<p>I am new !!</p>")
+//     })
+//     $("div").undelegate("p", "click");
+//    
+//     //on 是给父元素绑定事件,然后传递到子级...
+//     $("div").on("click", "p", function () {
+//         $("#box2 p").append("<p>I am new !!</p>")
+//     })
+//
+//     $("div").off("click", "p")
+
+    //绑定一次事件
+    // $("div").one("click", "p", function () {
+    //     $("#box2 p").append("<p>I am new !!</p>")
+    // })
+
+    // $("div").hover(function () {
+    //     console.log("Move in!")
+    // },function () {
+    //     console.log("Move out!")
+    // })
+
+    //ajax
     
     
 
-    console.log("happy day2!!!")
-})
+    // 只能同源访问, 3同: 同协议, 同网址, 同端口
+    $("div").hover(function () {
+        $.ajax({
+            type: "get",
+            url:" http://localhost:63342/LearnFrontend/jianfeng/06%E3%80%81JQuery%E5%9F%BA%E7%A1%80%EF%BC%888%E9%9B%86%EF%BC%89/index.html",
+            data:{a:1,b:2},
+            dataType: "html",
+            success: function (data, textStatus) {
+                console.log(textStatus)
+                console.log(data)
+
+            }
+        })
+    },null)
+});
+
+
 
 function selectVal(){
     // console.log("*****")
