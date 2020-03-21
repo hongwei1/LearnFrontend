@@ -1,0 +1,130 @@
+/*div is the block style, it always use the whole line!!*/
+*{
+    /*display: inline-block;*/
+    /*border: solid red 5px;*/
+    margin: 0;
+    padding: 0;
+}
+
+/*html{*/
+/*    margin: 20px  ;*/
+/*    border: solid red 10px;*/
+/*    padding: 10px;*/
+/*}*/
+/*head{*/
+/*    display: block;*/
+/*    margin: 20px  ;*/
+/*    border: solid red 10px;*/
+/*    padding: 10px;*/
+/*}*/
+/*body{*/
+/*    border: solid #ff14cd 20px;*/
+/*}*/
+/*#p1{*/
+/*    margin: 10px;*/
+/*    border: solid 10px;*/
+/*    padding-left: 20px;*/
+
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background-color: #c92b1e;*/
+/*}*/
+
+/*margin
+是相对的,不是决定的.只要两个 div 的距离取较大值,不是必须等于这个值.. 这样很合理...
+
+*/
+#box1{
+    /*margin: 10px;*/
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: solid red 10px;
+    /*padding-left: 20px;*/
+    /*padding-top: 10px;*/
+    /*padding-right: 10px;*/
+    /*padding-bottom: 10px;*/
+    
+    width: 100px;
+    height: 100px;
+    background-color: #3ed050;
+    text-align: center;
+    line-height:100px; 
+
+}
+
+#box2{
+    margin-top: 10px;
+    /*padding: 10px;*/
+    /*border: solid red 10px;*/
+    
+    width: 100px;
+    height: 100px;
+    background-color: #f1ff1d;
+
+    text-align: center;
+    line-height:100px;
+}
+
+#box3{
+    /*margin-top: 10px;*/
+    /*padding: 10px;*/
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border: solid red 5px;
+
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+
+    /*text-align: center;*/
+    /*line-height:100px;*/
+}
+
+/*线性: solid, dashed, dotted, double */
+#box4{
+    margin: 10px;
+    border: dotted #59c1ff 5px;
+    /*content <--> border 的距离, 称为`内边距` ... */
+    padding: 10px;
+
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    background-image: url("../../LearnHTMLCss/1.jpg");
+
+    /*if the content is over the box ,we need the overflow*/
+    /* 这个是默认值,内容不会被裁剪,元素框之外.*/
+    /*overflow: visible; */ 
+    overflow: hidden;
+    /*overflow: scroll;*/
+    /*overflow: auto; */
+    white-space: nowrap;
+    
+    /*下面的必须和 overflow: hidden; 和white-space: nowrap; 一起用:*/
+    text-overflow: ellipsis;
+    
+    
+    /*text-align: center;*/
+    /*line-height:100px;*/
+}
+
+#box7{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    margin-right: 50px;
+    /*display: inline-block;*/
+    float:left;
+}
+/*水平 margin 会叠加, 垂直的取大值!*/
+#box8{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    float:left;
+    margin-left: 50px;
+    /*display: inline-block;*/
+}
