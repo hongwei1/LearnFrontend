@@ -1,0 +1,32 @@
+/*页面布局的方式:*/
+/*    文档流: 安装正常的控件,放在各个位置...*/
+/*    浮动流:(脱离文档流), 浮动可以使元素向左向右移动,知道它的外边缘碰到包含框或另一个浮动框的边框为止.*/
+/*          浮动流就是从当前行开始浮动, 不会跑到第一行的...*/
+
+/*2 浮动*/
+/*  left, right, none(默认值)*/
+
+#div1{
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    float: left;
+}
+#div2{
+    width: 500px;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+}
+#div3{
+    width: 230px;
+    height: 130px;
+    background-color: blue;
+    float: left;
+}
+#div4{
+    width: 50px;
+    height: 50px;
+    background-color: goldenrod;
+    float:left;
+}
