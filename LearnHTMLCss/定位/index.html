@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*position: 属性*/
+        /*absolute : 相对定位属性的元素偏移. 父亲没有就去找爷爷的 positoin*/
+        /*fixed: */
+        /*relative: 相对定位元素,相对原来位置偏移, 通过 left, top, right 以及 bottom 
+                    不会对它的父级元素和相邻元素有任何影响,只是对自身原来的位置进行偏移!*/
+        /*static : 默认值*/
+        #box {
+            width: 500px;
+            height: 500px;
+            background-color: #29ffc5;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+        }
+        #box2 {
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+        }
+        #box3 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        #box4 {
+            width: 100px;
+            height: 100px;
+            background-color: #7f2d8d;
+            position: fixed;
+            top: 100px;
+            left: 600px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<!--定位: CSS 允许你对元素进行定位.
+它允许你定义元素框相对于正常,或相对于父元素, 一切皆为框. 
+-->
+
+<div id="box">
+    <div id="box1">
+        <div id="box2">
+        </div>
+    </div>
+</div>
+
+<div id="box3" style="float: left" ></div>
+<div id="box4" style="float: left"></div>
+
+</div>
+</body>
+</html>
