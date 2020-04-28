@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08、H5C3基础（10集）</title>
+</head>
+<body>
+<header>HEADER</header>
+<H1>H1 </H1>
+
+<input type = "text" list = "data" />
+<datalist id = "data">
+    <option>good</option>
+    <option>nice</option>
+    <option>hands</option>
+    <option>cool</option>
+</datalist>
+<details> 
+    <summary>Details Tag</summary>
+    <p>p1: This is the `details` tag, it explains how to use the details </p>
+    <p>p2: This is the `details` tag, it explains how to use the details </p>
+</details>
+
+<p> this will test the <mark> Mark </mark> tag </p>
+<p> this will test the <strong> Mark </strong> tag </p>
+<nav>
+    NAV
+</nav>
+
+<progress id="pro" max="100" value="50"></progress>
+<aside>
+    ASIDE
+</aside>
+<footer>FOOTER</footer>
+
+<script type="text/javascript">
+    var num = 0
+    selectVal(function () {
+        $("#pro").val(num + "")
+        num ++
+    },1000)
+</script>
+</body>
+</html>
