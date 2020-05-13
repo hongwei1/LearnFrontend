@@ -1,0 +1,14 @@
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+    height: 44px;
+}
+
+.select2-results__option[aria-selected] {
+    cursor: pointer;
+    height: 44px;
+}
+.select2-search--dropdown {
+    display: none;
+}
