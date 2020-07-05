@@ -1,0 +1,21 @@
+#check_border{
+    border: 1px #2278CE solid;
+    background: #ffffff;
+    height: 32px;
+    width: 32px;
+    float: left;
+}
+
+#check_border:hover{
+    background-image: url(status_yes_thick.svg);
+    background-repeat:no-repeat;
+    background-position: 7px;
+    background-size: 18px;
+}
+
+#checkimg{
+    width: 18px;
+    height: 18px;
+    padding: 7px;
+    border: 0;
+}
