@@ -1,0 +1,11 @@
+#check_border{
+    border: 1px #2278CE solid;
+    background: #ffffff;
+    height: 32px;
+    width: 32px;
+}
+
+#checkimg{
+    width: 32px;
+    height: 32px;
+}
