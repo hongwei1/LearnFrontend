@@ -1,0 +1,51 @@
+<!--https://www.runoob.com/ajax/ajax-asp-php.html-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function showHint(str)
+        {
+            var xmlhttp;
+            if (str.length==0)
+            {
+                document.getElementById("txtHint").innerHTML="";
+                return;
+            }
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                }
+            }
+            //we can get the variable from the input form and send it to the server as a `GET` parameter
+            //and we can get the response back. and how it in the next line.
+            xmlhttp.open("GET","https://www.runoob.com/try/ajax/gethint.php?q="+str,true);
+            
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+
+<h3>在输入框中尝试输入字母 a-z:</h3>
+<form action="">
+                                        <!--Here we use the keyup event, it will trigger the event when the key is up-->
+    输入姓名: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+</form>
+<p>提示信息: <span id="txtHint"></span></p>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+        function loadXMLDoc()
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","https://www.runoob.com/try/ajax/demo_get.php?t=" + Math.random(),true);
+            xmlhttp.send();
+        }
+        function loadXMLDoc2()
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("myDiv2").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","https://www.runoob.com/try/ajax/demo_get2.php?fname=Henry&lname=Ford",true);
+            xmlhttp.send();
+        }
+        function loadXMLDoc3()
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("myDiv3").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("POST","https://www.runoob.com/try/ajax/demo_post.php",true);
+            xmlhttp.send();
+        }
+        function loadXMLDoc4()
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("myDiv4").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("POST","https://www.runoob.com/try/ajax/demo_post2.php",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("fname=Henry&lname=Ford");
+        }
+
+        function loadXMLDoc5()
+        {
+            var xmlhttp;
+            var txt,x,i;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    xmlDoc=xmlhttp.responseXML;
+                    txt="";
+                    x=xmlDoc.getElementsByTagName("ARTIST");
+                    for (i=0;i<x.length;i++)
+                    {
+                        txt=txt + x[i].childNodes[0].nodeValue + "<br>";
+                    }
+                    document.getElementById("myDiv5").innerHTML=txt;
+                }
+            }
+            xmlhttp.open("GET","https://www.runoob.com/try/demo_source/cd_catalog.xml",true);
+            xmlhttp.send();
+        }
+        function loadXMLDoc6()
+        {
+            var xmlhttp;
+            var txt,x,i;
+            if (window.XMLHttpRequest)
+            {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                // 注意： onreadystatechange 事件被触发 4 次（0 - 4）, 分别是： 0-1、1-2、2-3、3-4，对应着 readyState 的每个变化。
+              console.log(xmlhttp.readyState + ":" + xmlhttp.status)
+                // 1:0
+                // 2:200
+                // 3:200
+                // 4:200
+                // --> this mean, 
+            }
+            xmlhttp.open("GET","https://www.runoob.com/try/demo_source/cd_catalog.xml",true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+
+<h2>AJAX-GET</h2>
+<button type="button" onclick="loadXMLDoc()">请求数据</button>
+<h2>AJAX-GET-Parameters</h2>
+<button type="button" onclick="loadXMLDoc2()">请求数据2</button>
+<h2>AJAX-Post</h2>
+<button type="button" onclick="loadXMLDoc3()">请求数据3</button>
+<h2>AJAX-Post-Headers</h2>
+<button type="button" onclick="loadXMLDoc4()">请求数据4</button>
+<h2>AJAX-Post-Response-XML</h2>
+<button type="button" onclick="loadXMLDoc6()">请求数据5</button>
+<div id="myDiv"></div>
+<hr>
+<div id="myDiv2"></div>
+<hr>
+<div id="myDiv3"></div>
+<hr>
+<div id="myDiv4"></div>
+<hr>
+<div id="myDiv5"></div>
+<hr>
+<div id="myDiv6"></div>
+<hr>
+
+</body>
+</html>
+
+
